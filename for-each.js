@@ -34,9 +34,9 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-
+    const newArray = arr.slice()
     const reversePetType = [];
-    arr.reverse().forEach((pet) => {
+    newArray.reverse().forEach((pet) => {
         reversePetType.push(pet.type);
     })
     return reversePetType;
@@ -55,7 +55,7 @@ Output:
 
 export function makeSpanishLanguageArray(arr) {
 
-    let spanishArray = [];
+    const spanishArray = [];
 
     // pets = [
     //     {

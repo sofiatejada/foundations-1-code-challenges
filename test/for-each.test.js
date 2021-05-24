@@ -51,12 +51,12 @@ test('should make a spanish array of pet objects', (expect) => {
     // Set up your arguments and expectations
     const expected = [
         {
-            nombre: 'coco',
             tipo: 'cat',
+            nombre: 'coco',
         },
         {
-            nombre: 'jumper',
             tipo: 'frog',
+            nombre: 'jumper',
         }
     ];
     
