@@ -19,7 +19,28 @@ Output:
 */
 
 export function makeMoreScreamingKeys(someObject) {
-    return {};
+
+    // let keys = Object.keys(someObject);
+    let loudKeys = {};
+    //put the keys from the object you're passing in into variable keys. it's an array!!
+    let keys = Object.keys(someObject);
+    console.log(keys);
+    //["name", "age", "type"]
+    keys.forEach((stuff) => {
+        //put the uppercase keys into a variable called newStuff
+        let newStuff = stuff.toUpperCase();
+        console.log(newStuff);
+        // NAME AGE TYPE, it just returns the keys in uppercase, not in an object or in an array
+
+        //here, we're saying in object loudKeys, we want a new key that's gonna be whatever is in newStuff, and a value of our original someObject's key:value. someObject[stuff] returns the value of that stuff
+        loudKeys[newStuff] = someObject[stuff]
+    })
+    
+
+
+    console.log(loudKeys);
+
+    return loudKeys;
 }
 
 /*
