@@ -102,10 +102,8 @@ Output:
 
 export function findTheCheese(arr) {
 
-    arr.filter((food) => {
-        if (food.id === 'cheese')
-        return true;
-    })
+    // return arr.find(({ id }) => id ==='cheese');
+    return arr.find((food) => food.id ==='cheese');
 }
 
 
