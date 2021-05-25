@@ -1,13 +1,30 @@
 // Use the forEach method to solve these problems! All functions should return a NEW array, without mutating the old array.
 
 /*
+Input:
+[
+    { name: 'spot', type: 'dog' },
+    { name: 'rover', type: 'dog' },
+    { name: 'jumpy', type: 'frog' },
+    { name: 'einstein', type: 'cat' },
+]
+*/
+
+/*
 Output:
 
 ['spot', 'rover', 'jumpy', 'einstein']
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+
+    const petNames = [];
+
+    arr.forEach((pet) => {
+        petNames.push(pet.name);
+    })
+
+    return petNames;
 }
 
 /*
@@ -17,7 +34,12 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    const newArray = arr.slice()
+    const reversePetType = [];
+    newArray.reverse().forEach((pet) => {
+        reversePetType.push(pet.type);
+    })
+    return reversePetType;
 }
 
 /*
@@ -32,6 +54,20 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
+
+    const spanishArray = [];
+
+    // pets = [
+    //     {
+    //         tipo: 'cat',
+    //         nombre: 'coco'
+    //     }
+    // ]
+    
+    arr.forEach((pet) => {
+        spanishArray.push({ nombre: pet.name, tipo: pet.type });
+    })
+    
+    return spanishArray;
 }
 
